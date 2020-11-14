@@ -1,5 +1,5 @@
 
-![](https://raw.githubusercontent.com/piotr-maker/tetris/blob/master/graphics/screen.jpg)
+![](https://github.com/piotr-maker/tetris/blob/master/graphics/screen.jpg?raw=true)
 
 # About
 Tetris python implementation with pygame
