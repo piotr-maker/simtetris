@@ -1,0 +1,4 @@
+recursive-include bin *
+recursive-include resources/fonts *
+recursive-include resources/graphics *
+recursive-include resources/sounds *

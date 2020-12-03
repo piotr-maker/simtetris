@@ -1,0 +1,50 @@
+name: simtetris
+title: SimTetris
+grade: stable
+version: '1'
+summary: Simple version of tetris game
+description: |
+  Simple version of popular russian game tetris
+confinement: strict
+base: core18
+
+
+architectures:
+  - build-on: amd64
+
+#START apps
+apps:
+  simtetris:
+    command: $SNAP/bin/simtetris
+    environment: 
+      "LD_LIBRARY_PATH": "$LD_LIBRARY_PATH:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio"
+    plugs:
+      - audio-playback
+      - desktop
+      - x11
+### END apps
+
+### START layout
+layout:
+  /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib:
+    bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib
+  /usr/share/alsa:
+    bind: $SNAP/usr/share/alsa
+### END layout
+
+### START parts
+parts:
+  simtetris:
+    plugin: python
+    python-version: python3
+    source: .
+    stage-packages:
+      - libpulse0
+      - pulseaudio
+      - libsdl2-2.0-0
+
+  resources:
+    plugin: dump
+    source: resources
+        
+### END parts

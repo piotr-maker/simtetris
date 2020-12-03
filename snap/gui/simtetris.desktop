@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Simtetris
+Exec=simtetris
+Comment=Simple version of tetris game
+Categories=Game;
+Terminal=false

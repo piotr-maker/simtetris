@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+
+from simtetris.game import SimTetris
+
+st = SimTetris()
+st.run_game()
